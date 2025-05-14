@@ -4,7 +4,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # Install apt software
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release neovim
 
 # Install Terraform
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
