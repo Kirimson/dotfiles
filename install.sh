@@ -57,3 +57,5 @@ curl -sS https://starship.rs/install.sh -o starship.sh
 chmod u+x starship.sh
 ./starship.sh --yes
 rm starship.sh
+
+source ~/.bashrc
