@@ -66,4 +66,3 @@ sudo mv ./kind ~/.local/bin/kind
 # k9s
 curl -LO https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
 tar -C ~/.local/bin -xf k9s_Linux_amd64.tar.gz k9s
-mv 
