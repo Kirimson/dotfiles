@@ -58,4 +58,3 @@ chmod u+x starship.sh
 ./starship.sh --yes
 rm starship.sh
 
-source ~/.bashrc
