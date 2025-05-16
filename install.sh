@@ -4,10 +4,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # Install apt software
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release neovim zsh
-
-# Set shell to zsh
-sudo usermod -s $(which zsh) coder
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release neovim
 
 # Install Terraform
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -62,15 +59,15 @@ chmod u+x starship.sh
 rm starship.sh
 
 # kind
-curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
-chmod +x ./kind
-mv -f ./kind ~/.local/bin/kind
+go install sigs.k8s.io/kind@v0.27.0
 
 # k9s
 curl -LO https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
 tar -C ~/.local/bin -xf k9s_Linux_amd64.tar.gz k9s
 
+cat >> ~/.bash_profile << EOF
 # Make profile auto source zshrc
-if [ -f ~/.zshrc ]; then
-  . ~/.zshrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
 fi
+EOF
