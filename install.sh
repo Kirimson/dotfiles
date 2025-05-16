@@ -4,7 +4,13 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # Install apt software
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release neovim
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release
+
+# Neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+rm nvim-linux-x86_64.tar.gz
 
 # Install Terraform
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -64,6 +70,7 @@ go install sigs.k8s.io/kind@v0.27.0
 # k9s
 curl -LO https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
 tar -C ~/.local/bin -xf k9s_Linux_amd64.tar.gz k9s
+rm -f k9s_Linux_amd64.tar.gz
 
 cat >> ~/.bash_profile << EOF
 # Make profile auto source zshrc
