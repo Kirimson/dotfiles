@@ -4,7 +4,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # Install apt software
-sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release neovim
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common apt-transport-https ca-certificates curl lsb-release neovim zsh
+
+# Set shell to zsh
+sudo usermod -s $(which zsh) coder
 
 # Install Terraform
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
@@ -66,3 +69,8 @@ sudo mv ./kind ~/.local/bin/kind
 # k9s
 curl -LO https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
 tar -C ~/.local/bin -xf k9s_Linux_amd64.tar.gz k9s
+
+# Make profile auto source zshrc
+if [ -f ~/.zshrc ]; then
+  . ~/.zshrc
+fi
