@@ -64,7 +64,7 @@ rm starship.sh
 # kind
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64
 chmod +x ./kind
-sudo mv ./kind ~/.local/bin/kind
+mv -f ./kind ~/.local/bin/kind
 
 # k9s
 curl -LO https://github.com/derailed/k9s/releases/download/v0.50.6/k9s_Linux_amd64.tar.gz
